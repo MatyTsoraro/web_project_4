@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="About US description of a persons trip to US"
+    />
+    <meta name="author" content="Maty Tsoraro" />
+    <meta
+      name="keywords"
+      content="Practicum100, USA, html, css, learning web development, Practicum100 Project 4"
+    />
+
+    <link rel="stylesheet" href="./pages/index.css" />
+
+    <title>Around the US</title>
+  </head>
+
+  <body class="body">
+    <header class="header section">
+      <img src="./images/logo.svg" alt="Around the US Logo" class="logo" />
+    </header>
+    <main class="content section">
+      <div class="separator"></div>
+      <section class="profile">
+        <img
+          src="./images/profile__image.jpg"
+          alt="Jacques Cousteau Profile Picture"
+          class="profile__image"
+        />
+        <div class="profile__info">
+          <div class="profile__person">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__title">Explorer</p>
+        </div>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+      <section class="cards">
+        <ul class="cards__list">
+          <li class="card">
+            <img
+              src="./images/card_1.jpg"
+              alt="Beautiful Yosemite Valley"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Yosemite Valley</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/card_2.jpg"
+              alt="Lake Louise in between mountains"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Lake Louise</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/card_3.jpg"
+              alt="sunset on the Bald Mountains"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Bald Mountains</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/card_4.jpg"
+              alt="Starry night in Latemar"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Latemar</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/card_5.jpg"
+              alt="Mountain lake view at Vanoise National Park"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Vanoise National Park</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="./images/card_6.jpg"
+              alt="Boats in the lake at Lago di Braise"
+              class="card__image"
+            />
+            <div class="card__title-area">
+              <h2 class="card__title">Lago di Braies</h2>
+              <button class="card__like-button" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer section">
+      <p class="footer__copyrights">© 2021 Around The U.S.</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <h2 class="popup__title">Edit profile</h2>
+        <form action="submit" class="form popup__form">
+          <fieldset class="form__fieldset">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="form__input"
+              required
+            />
+            <input
+              type="text"
+              name="title"
+              placeholder="About me"
+              class="form__input"
+              required
+            />
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <button class="form__button" type="submit">Save</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
