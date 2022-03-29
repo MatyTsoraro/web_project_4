@@ -11,13 +11,8 @@ const editProfileButton = profile.querySelector(".profile__edit-button");
 const popup = document.querySelector(".popup");
 const closeButton = popup.querySelector(".popup__close-button");
 
-////adding these to enable like button functionality
 const cards = document.querySelector(".cards");
 const likesButtons = cards.querySelectorAll(".card__like-button");
-
-///////////////
-//Event Handlers
-///////////////
 
 function openForm() {
   inputName.value = profileName.textContent;
@@ -35,7 +30,6 @@ function formHandler(event) {
   profileTitle.textContent = inputTitle.value;
 }
 
-//loop for like button functionality
 for (let i = 0; i < likesButtons.length; i++) {
   const likeButton = likesButtons[i];
   function toggleLike() {
@@ -44,9 +38,6 @@ for (let i = 0; i < likesButtons.length; i++) {
   likeButton.addEventListener("click", toggleLike);
 }
 
-///////////////
-//Event Listeners
-///////////////
 editProfileButton.addEventListener("click", openForm);
 closeButton.addEventListener("click", closeForm);
 saveButton.addEventListener("click", closeForm);
