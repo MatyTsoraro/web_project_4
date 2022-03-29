@@ -21,11 +21,4 @@ This is a project that showcases a trip to the US by a particular traveller. All
 # Github Pages Link:
 
 - [Link to the github pages link]
-
-## Plan on improving the project
-
-1. Adding the ability to submit the form to a server so information can be save somewhere rather than refresh on reload.
-
-2. The option to add places to the card list.
-
-3. The ability to "like" cards. Currently their is only a hover state on the "heart" icons, but no active state.
+  https://matytsoraro.github.io/web_project_4/
