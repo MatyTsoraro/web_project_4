@@ -36,6 +36,7 @@
   line-height: 1.22;
   cursor: pointer;
   transition: background ease-out 0.3s;
+  padding: 18.49px;
 }
 
 .form__button:hover {
@@ -53,8 +54,5 @@
     text-align: center;
     height: 46px;
     width: 238px;
-  }
-  .popup__container {
-    height: 322px;
   }
 }
