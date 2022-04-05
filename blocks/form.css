@@ -48,4 +48,14 @@
     width: 100%;
     max-width: none;
   }
+  .form__button {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    height: 46px;
+    width: 238px;
+  }
+  .popup__container {
+    height: 322px;
+  }
 }
