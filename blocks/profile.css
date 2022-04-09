@@ -33,7 +33,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 373px;
+  max-width: 358px;
 }
 
 .profile__title {
@@ -42,7 +42,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 415px;
+  max-width: 358px;
 }
 
 .profile__add-button {
@@ -118,7 +118,7 @@
   .profile__name {
     font-size: 22px;
     line-height: 1.2;
-    max-width: 282px;
+    max-width: 238px;
   }
 
   .profile__edit-button {
