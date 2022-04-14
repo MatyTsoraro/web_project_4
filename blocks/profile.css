@@ -16,7 +16,7 @@
 
 .profile__info {
   flex-grow: 1;
-  max-width: 100%;
+  max-width: calc(100% - 120px - 150px - 60px);
 }
 
 .profile__person {
@@ -98,6 +98,10 @@
   .profile {
     flex-direction: column;
     text-align: center;
+  }
+
+  .profile__info {
+    max-width: 100%;
   }
 }
 
