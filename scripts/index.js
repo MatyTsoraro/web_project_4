@@ -43,3 +43,55 @@ editProfileButton.addEventListener("click", openForm);
 closeButton.addEventListener("click", closeForm);
 //saveButton.addEventListener("click", closeForm);
 form.addEventListener("submit", formHandler);
+
+/////////////////
+//Declarations//
+////////////////
+
+const initialCards = [
+  {
+    name: "Yosemite Valley",
+    link: "https://code.s3.yandex.net/web-code/yosemite.jpg",
+  },
+  {
+    name: "Lake Louise",
+    link: "https://code.s3.yandex.net/web-code/lake-louise.jpg",
+  },
+  {
+    name: "Bald Mountains",
+    link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg",
+  },
+  {
+    name: "Latemar",
+    link: "https://code.s3.yandex.net/web-code/latemar.jpg",
+  },
+  {
+    name: "Vanoise National Park",
+    link: "https://code.s3.yandex.net/web-code/vanoise.jpg",
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://code.s3.yandex.net/web-code/lago.jpg",
+  },
+];
+
+//wrapper
+const cardsList = document.querySelector(".cards__list");
+
+initialCards.forEach((card) => {
+  //get a reference to the template element
+  const cardTemplate = document
+    .querySelector("#card-template")
+    .content.querySelector(".cards__list");
+
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+
+  cardImage.style.backgroundImage = `url(${card.link})`;
+  cardTitle.textContent = card.name;
+
+  cardsList.append(cardElement);
+  //create a card element
+  //append that card element to cards-list
+});
