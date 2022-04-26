@@ -75,11 +75,35 @@ const initialCards = [
   },
 ];
 
-//wrapper
-const cardsList = document.querySelector(".cards__list");
+const addCardModal = document.querySelector(".popup_type_add-card");
+const addCardModalCloseButton = document.querySelector(".popup_close_add-card");
+const profileModal = document.querySelector(".popup_type_profile");
+const addCardButton = document.querySelector(".profile__add-button");
 
-initialCards.forEach((card) => {
-  //get a reference to the template element
+editProfileButton.addEventListener("click", () => toggleModalWindow(popup));
+closeButton.addEventListener("click", () => toggleModalWindow(popup));
+addCardModalCloseButton.addEventListener("click", () =>
+  toggleModalWindow(addCardModal)
+);
+addCardButton.addEventListener("click", () => toggleModalWindow(addCardModal));
+
+//function for open & close popups
+function toggleModalWindow(modalWindow) {
+  if (!modalWindow.classList.contains("popup_is")) {
+    profileModalFormTitle.value = profileTitle.textContent;
+    profileModalFormDescription.value = profileDescription.textContent;
+  }
+  modalWindow.classList.toggle("popup_is-opened");
+}
+
+function formSubmitHandler(evt) {
+  evt.preventDefault();
+  profileTitle.textContent = profileModalFormTitle.value;
+  profileDescription.textContent = profileModalFormDescription.value;
+  toggleModalWindow(profileModal);
+}
+
+function createCardElement(card) {
   const cardTemplate = document
     .querySelector("#card-template")
     .content.querySelector(".cards__list");
@@ -90,8 +114,13 @@ initialCards.forEach((card) => {
 
   cardImage.style.backgroundImage = `url(${card.link})`;
   cardTitle.textContent = card.name;
+  return cardElement;
+}
 
-  cardsList.append(cardElement);
-  //create a card element
-  //append that card element to cards-list
-});
+function renderCard(card, wrapper) {
+  wrapper.append(createCardElement(card));
+}
+
+const cardsList = document.querySelector(".cards__list");
+
+initialCards.forEach((card) => renderCard(card, cardsList));
