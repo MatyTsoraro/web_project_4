@@ -1,49 +1,3 @@
-const form = document.querySelector(".form");
-const profile = document.querySelector(".profile");
-//const saveButton = form.querySelector(".form__button");
-
-const profileName = profile.querySelector(".profile__name");
-const profileTitle = profile.querySelector(".profile__title");
-const inputName = form.querySelector(".form__input[name='name']");
-const inputTitle = form.querySelector(".form__input[name='title']");
-
-const editProfileButton = profile.querySelector(".profile__edit-button");
-const popup = document.querySelector(".popup");
-const closeButton = popup.querySelector(".popup__close-button");
-
-//const cards = document.querySelector(".cards");
-//const likesButtons = cards.querySelectorAll(".card__like-button");
-
-function openForm() {
-  inputName.value = profileName.textContent;
-  inputTitle.value = profileTitle.textContent;
-  popup.classList.add("popup_opened");
-}
-
-function closeForm() {
-  popup.classList.remove("popup_opened");
-}
-
-function formHandler(event) {
-  event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileTitle.textContent = inputTitle.value;
-  closeForm();
-}
-
-//for (let i = 0; i < likesButtons.length; i++) {
-//const likeButton = likesButtons[i];
-//function toggleLike() {
-// likeButton.classList.toggle("card__like-button_active");
-//}
-// likeButton.addEventListener("click", toggleLike);
-//}
-
-editProfileButton.addEventListener("click", openForm);
-closeButton.addEventListener("click", closeForm);
-//saveButton.addEventListener("click", closeForm);
-form.addEventListener("submit", formHandler);
-
 /////////////////
 //Declarations//
 ////////////////
@@ -75,17 +29,29 @@ const initialCards = [
   },
 ];
 
+// Modals
+const cardsList = document.querySelector(".cards__list");
 const addCardModal = document.querySelector(".popup_type_add-card");
-const addCardModalCloseButton = document.querySelector(".popup_close_add-card");
 const profileModal = document.querySelector(".popup_type_profile");
-const addCardButton = document.querySelector(".profile__add-button");
-
-editProfileButton.addEventListener("click", () => toggleModalWindow(popup));
-closeButton.addEventListener("click", () => toggleModalWindow(popup));
-addCardModalCloseButton.addEventListener("click", () =>
-  toggleModalWindow(addCardModal)
+const profileModalForm = document.querySelector(".popup_form");
+const profileModalFormTitle = profileModalForm.querySelector(
+  ".popup__input_type_name"
 );
-addCardButton.addEventListener("click", () => toggleModalWindow(addCardModal));
+const profileModalFormDescription = profileModalForm.querySelector(
+  ".popup__input_type_description"
+);
+
+// Buttons and other DOM elements
+const addCardButton = document.querySelector(".profile__add-button");
+const addCardModalCloseButton = document.querySelector(".popup_close_add-card");
+const profileModalCloseButton = document.querySelector(".popup_close_profile");
+const profileEditButton = document.querySelector(".profile__edit-button");
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+
+//////////////
+//functions//
+////////////
 
 //function for open & close popups
 function toggleModalWindow(modalWindow) {
@@ -113,7 +79,9 @@ function createCardElement(card) {
   const cardTitle = cardElement.querySelector(".card__title");
 
   cardImage.style.backgroundImage = `url(${card.link})`;
+
   cardTitle.textContent = card.name;
+
   return cardElement;
 }
 
@@ -121,6 +89,19 @@ function renderCard(card, wrapper) {
   wrapper.append(createCardElement(card));
 }
 
-const cardsList = document.querySelector(".cards__list");
+//////////////////
+//Event handlers//
+/////////////////
 
+addCardButton.addEventListener("click", () => toggleModalWindow(addCardModal));
+addCardModalCloseButton.addEventListener("click", () =>
+  toggleModalWindow(addCardModal)
+);
+profileModalForm.addEventListener("submit", formSubmitHandler);
+profileEditButton.addEventListener("click", () =>
+  toggleModalWindow(profileModal)
+);
+profileModalCloseButton.addEventListener("click", () =>
+  toggleModalWindow(profileModal)
+);
 initialCards.forEach((card) => renderCard(card, cardsList));

@@ -33,10 +33,10 @@
         />
         <div class="profile__info">
           <div class="profile__person">
-            <h1 class="profile__name">Jacques Cousteau</h1>
+            <h1 class="profile__title">Jacques Cousteau</h1>
             <button class="profile__edit-button" type="button"></button>
           </div>
-          <p class="profile__title">Explorer</p>
+          <p class="profile__description">Explorer</p>
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
@@ -114,30 +114,25 @@
     <footer class="footer section">
       <p class="footer__copyrights">© 2021 Around The U.S.</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_type_profile">
       <div class="popup__container">
-        <button class="popup__close-button" type="button"></button>
+        <button class="popup__close popup_close_profile" type="button"></button>
         <h2 class="popup__title">Edit profile</h2>
-        <form name="edit-form" class="form popup__form">
-          <fieldset class="form__fieldset">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="form__input"
-              required
-            />
-            <input
-              type="text"
-              name="title"
-              placeholder="About me"
-              class="form__input"
-              required
-            />
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <button class="form__button" type="submit">Save</button>
-          </fieldset>
+        <form class="popup__form" name="new">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="popup__input popup__input_type_name"
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="About me"
+            class="popup__input popup__input_type_description"
+          />
+
+          <button class="button popup__button" type="submit">Save</button>
         </form>
       </div>
     </div>
@@ -148,27 +143,23 @@
           class="popup__close popup_close_add-card"
           type="button"
         ></button>
-        <h2 class="popup__title">Edit profile</h2>
-        <form name="edit-form" class="form popup__form">
-          <fieldset class="form__fieldset">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="form__input"
-              required
-            />
-            <input
-              type="text"
-              name="title"
-              placeholder="About me"
-              class="form__input"
-              required
-            />
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <button class="form__button" type="submit">Save</button>
-          </fieldset>
+        <h2 class="popup__title">New place</h2>
+        <form class="popup__form" name="new">
+          <input
+            type="text"
+            name="name"
+            placeholder="Title"
+            class="popup__input popup__input_type_name"
+          />
+          <input
+            type="url"
+            name="name"
+            placeholder="Image link"
+            class="popup__input popup__input_type_description"
+            required
+          />
+
+          <button class="button popup__button" type="submit">Create</button>
         </form>
       </div>
     </div>
@@ -182,6 +173,6 @@
         </div>
       </li>
     </template>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>

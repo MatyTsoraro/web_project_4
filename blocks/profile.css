@@ -25,7 +25,7 @@
   align-items: flex-end;
 }
 
-.profile__name {
+.profile__title {
   padding: 0;
   margin: 0;
   font-size: 42px;
@@ -37,7 +37,7 @@
   max-width: 358px;
 }
 
-.profile__title {
+.profile__description {
   padding: 0;
   margin: 9px 0 0;
   text-overflow: ellipsis;
@@ -85,7 +85,7 @@
 }
 
 @media screen and (max-width: 765px) {
-  .profile__name {
+  .profile__title {
     font-size: 28px;
     line-height: 1;
   }
@@ -120,13 +120,13 @@
   .profile__person {
     gap: 9px;
   }
-  .profile__name {
+  .profile__title {
     font-size: 22px;
     line-height: 1.2;
     max-width: 238px;
   }
 
-  .profile__title {
+  .profile__description {
     font-size: 14px;
     line-height: 1.21;
     max-width: 238px;
