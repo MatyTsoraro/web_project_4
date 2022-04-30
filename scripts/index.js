@@ -30,10 +30,13 @@ const initialCards = [
 ];
 
 // Modals
-const cardsList = document.querySelector(".cards__list");
+
 const addCardModal = document.querySelector(".popup_type_add-card");
+
+const previewModal = document.querySelector(".popup_type_preview");
+
 const profileModal = document.querySelector(".popup_type_profile");
-const profileModalForm = document.querySelector(".popup_form");
+const profileModalForm = document.querySelector(".popup__form");
 const profileModalFormTitle = profileModalForm.querySelector(
   ".popup__input_type_name"
 );
@@ -48,6 +51,9 @@ const profileModalCloseButton = document.querySelector(".popup_close_profile");
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
+
+//Wrapper
+const cardsList = document.querySelector(".cards__list");
 
 //////////////
 //functions//
@@ -69,6 +75,8 @@ function formSubmitHandler(evt) {
   toggleModalWindow(profileModal);
 }
 
+const onLikeButtonClick = () => {};
+
 function createCardElement(card) {
   const cardTemplate = document
     .querySelector("#card-template")
@@ -76,11 +84,17 @@ function createCardElement(card) {
 
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
   const cardTitle = cardElement.querySelector(".card__title");
 
   cardImage.style.backgroundImage = `url(${card.link})`;
 
   cardTitle.textContent = card.name;
+
+  cardImage.addEventListener("click", onLikeButtonClick);
+  //handle image click
+
+  cardLikeButton.addEventListener("click", () => onLikeButtonClick(card));
 
   return cardElement;
 }
