@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-.form__input {
+.popup__input {
   padding: 13px 7px;
   border-top: 0;
   border-left: 0;
@@ -24,11 +24,11 @@
   border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
 }
 
-.form__input::placeholder {
+.popup__input::placeholder {
   color: #000;
 }
 
-.form__button {
+.popup__button {
   background: #000;
   border: none;
   color: #fff;
@@ -40,7 +40,7 @@
   width: 358px;
 }
 
-.form__button:hover {
+.popup__button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -49,7 +49,7 @@
     width: 100%;
     max-width: none;
   }
-  .form__button {
+  .popup__button {
     font-size: 14px;
     line-height: 17px;
     text-align: center;

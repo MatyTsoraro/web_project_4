@@ -51,21 +51,26 @@
       <div class="popup__container">
         <button class="popup__close popup_close_profile" type="button"></button>
         <h2 class="popup__title">Edit profile</h2>
-        <form class="popup__form" name="new">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            class="popup__input popup__input_type_name"
-          />
-          <input
-            type="text"
-            name="description"
-            placeholder="About me"
-            class="popup__input popup__input_type_description"
-          />
-
-          <button class="button popup__button" type="submit">Save</button>
+        <form class="form popup__form" name="new">
+          <fieldset class="form__fieldset">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="popup__input popup__input_type_name"
+              required
+            />
+            <input
+              type="text"
+              name="description"
+              placeholder="About me"
+              class="popup__input popup__input_type_description"
+              required
+            />
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <button class="button popup__button" type="submit">Save</button>
+          </fieldset>
         </form>
       </div>
     </div>
@@ -77,21 +82,26 @@
           type="button"
         ></button>
         <h2 class="popup__title">New place</h2>
-        <form class="popup__form" name="new">
-          <input
-            type="text"
-            name="name"
-            placeholder="Title"
-            class="popup__input popup__input_type_name"
-          />
-          <input
-            type="url"
-            name="name"
-            placeholder="Image link"
-            class="popup__input popup__input_type_description"
-          />
-
-          <button class="button popup__button" type="submit">Create</button>
+        <form class="form popup__form" name="new">
+          <fieldset class="form__fieldset">
+            <input
+              type="text"
+              name="name"
+              placeholder="Title"
+              class="popup__input popup__input_type_name"
+              required
+            />
+            <input
+              type="url"
+              name="name"
+              placeholder="Image link"
+              class="popup__input popup__input_type_description"
+              required
+            />
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <button class="button popup__button" type="submit">Create</button>
+          </fieldset>
         </form>
       </div>
     </div>
