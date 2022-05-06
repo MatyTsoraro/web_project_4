@@ -44,6 +44,18 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.popup_close_preview {
+  background: #000;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.22;
+  cursor: pointer;
+  transition: background ease-out 0.3s;
+  height: 50.15px;
+  width: 358px;
+}
+
 @media screen and (max-width: 524px) {
   .form {
     width: 100%;
