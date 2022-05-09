@@ -82,14 +82,18 @@ const onImagePreview = (card) => {
   toggleModalWindow(previewModal);
 };
 
-const onLikeButtonClick = () => {
-  console.log("like");
-};
+function toggleClass(component, cl) {
+  component.classList.toggle(cl);
+}
+
+//const onLikeButtonClick = () => {
+//console.log("like");
+//};
 
 function createCardElement(card) {
   const cardTemplate = document
     .querySelector("#card-template")
-    .content.querySelector(".cards__list");
+    .content.querySelector(".card");
 
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
@@ -101,6 +105,9 @@ function createCardElement(card) {
   cardTitle.textContent = card.name;
 
   cardImage.addEventListener("click", () => onImagePreview(card));
+  cardLikeButton.addEventListener("click", () =>
+    toggleClass(cardLikeButton, "card__like-button_active")
+  );
   //handle image click
   // cardElement
   // .querySelector(".card__like-button")
@@ -114,9 +121,8 @@ function createCardElement(card) {
   //   thisCard.remove();
   // });
 
-  cardLikeButton.addEventListener("click", () =>
-    onLikeButtonClick(cardElement)
-  );
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => cardElement(remove));
 
   return cardElement;
 }
