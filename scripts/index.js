@@ -122,7 +122,7 @@ function createCardElement(card) {
   // });
 
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
-  cardDeleteButton.addEventListener("click", () => cardElement(remove));
+  cardDeleteButton.addEventListener("click", () => cardElement.remove());
 
   return cardElement;
 }
