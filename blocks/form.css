@@ -1,71 +1,71 @@
 .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 358px;
-  width: 358px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  margin: 34px 0 54px;
+  align-self: start;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 14px;
-  line-height: 1.21;
-}
-
-.form__fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border: none;
-  padding: 0;
-}
-
-.popup__input {
-  padding: 13px 7px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
-}
-
-.popup__input::placeholder {
-  color: #000;
-}
-
-.popup__button {
-  background: #000;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  line-height: 1.22;
-  cursor: pointer;
-  transition: background ease-out 0.3s;
-  height: 50.15px;
+  line-height: 17px;
+  padding: 0 0 13.25px;
+  align-self: start;
   width: 358px;
+  margin-bottom: 29.74px;
 }
 
-.popup__button:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.popup_close_preview {
+.form__button {
   background: #000;
-  border: none;
-  color: #fff;
+  color: white;
+  border-radius: 2px;
   font-size: 18px;
-  line-height: 1.22;
-  cursor: pointer;
-  transition: background ease-out 0.3s;
-  height: 50.15px;
+  line-height: 22px;
+  padding: 13.66px 124px 18.49px 125px;
+  margin-top: 18px;
+  margin-bottom: 36.51px;
+  transition-duration: 1s;
   width: 358px;
+  border: none;
 }
 
-@media screen and (max-width: 524px) {
+.form__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 610px) {
   .form {
-    width: 100%;
-    max-width: none;
+    max-width: 238px;
   }
-  .popup__button {
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    height: 46px;
+
+  .form__title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 25px;
+    margin-bottom: 76px;
+  }
+
+  .form__input {
+    padding-bottom: 9px;
     width: 238px;
+    margin-bottom: 30px;
+  }
+
+  .form__button {
+    max-width: 238px;
+    padding: 14px 100px;
+    margin-top: 16px;
+    margin-bottom: 25px;
   }
 }
