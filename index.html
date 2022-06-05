@@ -23,7 +23,7 @@
       <section class="profile">
         <div class="profile__user">
           <img
-            src="./images/profile__image.jpg"
+            src="./images/Profile__image.jpg"
             alt="profile image"
             class="profile__image"
           />
@@ -56,15 +56,25 @@
           <form class="form form_type_profile" name="profile">
             <h2 class="form__title">Edit profile</h2>
             <input
+              id="name-input"
               type="text"
               class="form__input form__input_type_name"
               placeholder="Name"
+              required
+              minlength="2"
+              maxlength="40"
             />
+            <span id="name-input-error" class="form__input-error"></span>
             <input
+              id="about-input"
               type="text"
               class="form__input form__input_type_occupation"
               placeholder="About me"
+              required
+              minlength="2"
+              maxlength="200"
             />
+            <span id="about-input-error" class="form__input-error"></span>
             <button type="submit" class="form__button">Save</button>
           </form>
         </div>
@@ -80,15 +90,23 @@
           <form class="form form_type_add" name="add card">
             <h2 class="form__title">New place</h2>
             <input
+              id="title-input"
               type="text"
               class="form__input form__input_type_image-title"
               placeholder="Title"
+              required
+              minlength="1"
+              maxlength="30"
             />
+            <span id="title-input-error" class="form__input-error"></span>
             <input
-              type="text"
+              id="url-input"
+              type="url"
               class="form__input form__input_type_image-link"
-              placeholder="Image link"
+              placeholder="Image URL"
+              required
             />
+            <span id="url-input-error" class="form__input-error"></span>
             <button type="submit" class="form__button">Create</button>
           </form>
         </div>
@@ -122,12 +140,13 @@
           <h2 class="card__title"></h2>
           <button
             type="button"
-            aria-label="like button"
+            aria-label="heart shaped button"
             class="card__button card__button_type_like"
           ></button>
         </div>
       </li>
     </template>
+    <script src="./scripts/validate.js" defer></script>
     <script src="./scripts/index.js" defer></script>
   </body>
 </html>
