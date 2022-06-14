@@ -57,6 +57,8 @@ const closeAddPopupButton = document.querySelector(
   ".popup__button-close_type_add"
 );
 
+const createCardButton = document.querySelector(".form__button");
+
 //Other Elements
 const profileName = document.querySelector(".profile__name");
 const profileOccupation = document.querySelector(".profile__occupation");
@@ -172,4 +174,10 @@ formAdd.addEventListener("submit", function (e) {
   renderCard(card);
   closePopup(addCardPopup);
   formAdd.reset();
+  const addCardFormInputElements = [addTitleInput, addImageInput];
+  toggleButton(
+    addCardFormInputElements,
+    createCardButton,
+    enableValidation(settings)
+  );
 });

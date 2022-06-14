@@ -1,13 +1,13 @@
 const showInputError = (input, formEl, settings) => {
-  const errorSpan = formEl.querySelector("#" + input.id + "-error");
-  errorSpan.textContent = input.validationMessage;
-  errorSpan.classList.add(settings.errorClass);
+  const errorElement = formEl.querySelector("#" + input.id + "-error");
+  errorElement.textContent = input.validationMessage;
+  errorElement.classList.add(settings.errorClass);
 };
 
 const hideInputError = (input, formEl, settings) => {
-  const errorSpan = formEl.querySelector("#" + input.id + "-error");
-  errorSpan.textContent = "";
-  errorSpan.classList.remove(settings.errorClass);
+  const errorElement = formEl.querySelector("#" + input.id + "-error");
+  errorElement.textContent = "";
+  errorElement.classList.remove(settings.errorClass);
 };
 
 const checkInputValidity = (formEl, input, settings) => {
@@ -51,10 +51,12 @@ const enableValidation = (settings) => {
   });
 };
 
-enableValidation({
+const settings = {
   formSelector: ".form",
   inputSelector: ".form__input",
   submitButtonSelector: ".form__button",
   inactiveButtonClass: "form__button_disabled",
   errorClass: "form__input-error_visible",
-});
+};
+
+enableValidation(settings);
