@@ -163,7 +163,7 @@ formProfile.addEventListener("submit", saveFormProfilePopup);
 
 addCardButton.addEventListener("click", () => {
   openPopup(addCardPopup);
-  disableButton(button, settings);
+  disableButton(createCardButton);
 });
 
 formAdd.addEventListener("submit", function (e) {
@@ -178,15 +178,21 @@ formAdd.addEventListener("submit", function (e) {
   //const addCardFormInputElements = [addTitleInput, addImageInput];
   //toggleButton(addCardFormInputElements, createCardButton, enableValidation(settings);
 
-  disableButton(button, settings);
+  disableButton(createCardButton);
+
 });
 
 function enableButton(button, settings) {
-  button.disabled = true;
-  button.classList.add(settings.inactiveButtonClass);
+  button.disabled = false;
+  button.classList.remove("form__button_disabled");
 }
+
 
 function disableButton(button, settings) {
   button.disabled = true;
-  button.classList.add(settings.inactiveButtonClass);
+  button.classList.add("form__button_disabled")
 }
+
+
+
+
