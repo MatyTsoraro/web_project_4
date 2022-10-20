@@ -57,7 +57,7 @@ const closeAddPopupButton = document.querySelector(
   ".popup__button-close_type_add"
 );
 
-const createCardButton = document.querySelector(".form__button");
+const createCardButton = formAdd.querySelector(".form__button");
 
 //Other Elements
 const profileName = document.querySelector(".profile__name");
