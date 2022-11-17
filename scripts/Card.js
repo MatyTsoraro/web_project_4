@@ -21,7 +21,7 @@ class Card {
     }
 
     _handleDelete() {
-        this._cardSelector.removeCard(this._name);
+        this._cardSelector.remove(this._name);
 
     }
 
