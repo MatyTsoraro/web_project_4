@@ -1,36 +1,39 @@
 
+ //Open popup
 
-//Funtions for open&close Modal windows
 
-export function handleClickToClose (e) {
-    if (e.target.classList.contains('popup_open')) {
-      closePopup(e.target)
-    }
+const openPopup = (modal) => {
+  modal.classList.add("popup_opened");
+
+  document.addEventListener("keydown", closePopupByEscape);
+  modal.addEventListener("mousedown", closePopupOnRemoteClick);
+};
+
+
+ // Hide popup
+
+
+const hidePopup = (modal) => {
+  modal.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closePopupByEscape);
+  modal.removeEventListener("mousedown", closePopupOnRemoteClick);
+};
+
+
+ // Close popup by 'esc' key
+
+
+const closePopupByEscape = (evt) => {
+  if (evt.key === "Escape") {
+    hidePopup(document.querySelector(".popup_opened"));
   }
+};
 
-  export function handleEscToClose (e) {
-    if (e.key === 'Escape') {
-      const popupVisible = document.querySelector('.popup_open')
-      closePopup(popupVisible)
-    }
+//close popup by click mouse out off popup
+const closePopupOnRemoteClick = (evt) => {
+  if (evt.target === evt.currentTarget) {
+    hidePopup(evt.target);
   }
+};
 
-  export function openPopup (popup) {
-    popup.classList.add('popup_open')
-    document.addEventListener('mousedown', handleClickToClose)
-    document.addEventListener('keydown', handleEscToClose)
-  }
-
-  export function openEditProfilePopup () {
-    inputName.value = profileName.textContent
-    inputOccupation.value = profileOccupation.textContent
-    openPopup(editProfilePopup)
-  }
-
-  export function closePopup (popup) {
-    popup.classList.remove('popup_open')
-    document.removeEventListener('mousedown', handleClickToClose)
-    document.removeEventListener('keydown', handleEscToClose)
-  }
-
-
+export { openPopup, hidePopup };
