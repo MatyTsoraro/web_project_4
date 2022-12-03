@@ -1,6 +1,41 @@
-import FormValidator from "./FormValidator.js";
-import Card from "./Card.js";
-import { openPopup, hidePopup } from "./utils.js";
+
+import "./index.css";
+//import all the classes
+import {initialCards, selectors} from "../utils/constants";
+import Card from "../components/Card";
+import { openPopup, hidePopup } from "../components/utils";
+import Section from "../components/Section";
+import PopupWithImages from "../components/PopupWithImages";
+import FormValidator from "../components/FormValidator";
+
+
+
+//create instances of the classes
+const CardPreviewPopup = new PopupWithImages(selectors.previewPopup);
+const CardSection = new Section(
+    {
+      renderer:(data)=>{
+        const cardEl = new Card({data,handleImageClick:(imagData) => {
+            CardPreviewPopup.open(imagData);
+          }},selectors.cardTemplate,)
+
+        CardSection.addItems(cardEl.generateCard());
+      },
+    },
+    selectors.cardSection
+);
+
+//initialize al of my instances
+CardSection.renderItems(initialCards);
+CardPreviewPopup.setEventListeners();
+editProfileFormValidator.enableValidation();
+addCardFormValidation.enableValidation();
+
+
+
+
+
+//all the rest
 
 //Wrappers
 const editProfileModal = document.querySelector(".popup_type_edit-profile");
