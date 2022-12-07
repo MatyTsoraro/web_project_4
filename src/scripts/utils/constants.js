@@ -1,7 +1,13 @@
 
-export const ESC_KEY_CODE = 27;
+const configClasses = {
+    inputSelector: ".form__input",
+    inputErrorClass: "form__input_type_error",
+    errorClass: "form__input-error_active",
+    submitButtonSelector: ".form__button",
+    inactiveButtonClass: "form__button_disabled",
+};
 
-export const initialCards = [
+ const initialCards = [
     {
         name: "Yosemite Valley",
         link: "https://code.s3.yandex.net/web-code/yosemite.jpg",
@@ -28,4 +34,4 @@ export const initialCards = [
     },
 ];
 
-export const selectors = {cardSection:"gallery", cardTemplate : ".card",previewPopup:"popup_type_card",};
+export { configClasses, initialCards };
