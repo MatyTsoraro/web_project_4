@@ -1,4 +1,4 @@
-import "../pages/index.css"; // add import of the main stylesheets file
+import "../pages/index.css"; 
 
 import Card from "../scripts/Card";
 import FormValidator from "../scripts/FormValidator";
