@@ -1,12 +1,12 @@
-import "../pages/index.css"; 
+import "../pages/index.css";
 
-import Card from "../scripts/Card";
-import FormValidator from "../scripts/FormValidator";
+import Card from "../components/Card";
+import FormValidator from "../components/FormValidator";
 import Section from "../components/Section";
 import PopupWithImage from "../components/PopupWithImage";
-import PopupWithForm from "../components/PopupWithForms";
+import PopupWithForm from "../components/PopupWithForm";
 import UserInfo from "../components/UserInfo.js";
-import { configClasses, initialCards } from "../scripts/constants";
+import { configClasses, initialCards } from "../scripts/utils/constants";
 
 //Wrappers
 const editProfileModal = document.querySelector(".popup_type_edit-profile");
