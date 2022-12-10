@@ -1,38 +1,41 @@
 {
-  "name": "web_project8",
+  "name": "web_project_4",
   "version": "1.0.0",
-  "description": "This is a project that showcases a trip to the US by a particular traveller. All the elements are displayed correctly on popular screen sizes. The main skill learned for this project is DOM manipulation with Javascript. It can be see when clicking on the edit button by the profile name. The form can change the name displayed on the profile.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "serve": "webpack serve"
+    "dev": "webpack serve",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MatyTsoraro/web_project_4.git"
   },
-  "author": "",
+  "author": "Lev Meir",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MatyTsoraro/web_project_4/issues"
   },
   "homepage": "https://github.com/MatyTsoraro/web_project_4#readme",
   "devDependencies": {
-    "@babel/core": "7.18.9",
-    "@babel/preset-env": "7.18.9",
-    "autoprefixer": "10.4.7",
-    "babel-loader": "8.2.5",
-    "clean-webpack-plugin": "4.0.0",
-    "css-loader": "6.7.1",
-    "cssnano": "5.1.12",
-    "html-webpack-plugin": "5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "postcss-loader": "7.0.1",
-    "webpack": "5.73.0",
-    "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.9.3"
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.2",
+    "cssnano": "^5.1.14",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.1",
+    "postcss-loader": "^7.0.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "core-js": "3.23.5"
+    "core-js": "^3.26.1",
+    "node-sass": "^8.0.0"
   }
 }

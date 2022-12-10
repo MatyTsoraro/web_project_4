@@ -1,295 +1,165 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
-<html lang="en"> 
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
 
-  <head> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- 
+  <meta name="description" content="Exploring places in USA" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="author" content="Maty Tsoraro" />
 
- 
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <!-- <link rel="stylesheet" href="./pages/index.css" /> -->
 
- 
+  <link rel="icon" href="XXXXX" />
 
-    <meta name="description" content="Exploring places in USA" /> 
+  <title>Around the US by Maty Tsoraro</title>
+ </head>
 
- 
+ <body class="page">
+  <header class="header">
+   <img class="header__logo" src="imagesogo.svg" alt="logo" />
+  </header>
 
-    <meta name="author" content="Maty Tsoraro" /> 
+  <main class="main">
+   <section class="profile">
+    <img src="imagesacques-cousteau.jpg" alt="avatar" class="profile__avatar" />
 
- 
+    <div class="profile__description">
+     <div class="profile__wrapper">
+      <h1 class="profile__title">Jacques Cousteau</h1>
 
-    <meta name="keywords" content="HTML, CSS, JavaScript" /> 
+      <button type="button" class="profile__button-edit"></button>
+     </div>
 
- 
+     <p class="profile__subtitle">Explorer</p>
+    </div>
 
-    <!-- <link rel="stylesheet" href="./pages/index.css" /> --> 
+    <button type="button" class="profile__button-add"></button>
+   </section>
 
- 
+   <section class="gallery"></section>
+  </main>
 
-    <link rel="icon" href="XXXXX" /> 
+  <footer class="footer">
+   <p class="footer__copyright">Â© 2022 Around The U.S.</p>
+  </footer>
 
- 
+  <!-- Edit Modal Profile -->
 
-    <title>Around the US by Maty Tsoraro</title> 
+  <div class="popup popup_type_edit-profile">
+   <div class="popup__content">
+    <button type="button" class="popup__close"></button>
 
-  </head> 
+    <h2 class="popup__header">Edit profile</h2>
 
-  <body class="page"> 
+    <form name="profile" class="form popup__form" novalidate>
+     <fieldset class="form__editor">
+      <input
+       id="name-input"
+       type="text"
+       placeholder="Name"
+       name="name"
+       minlength="2"
+       maxlength="40"
+       class="form__input form__input_content_name"
+       required />
 
-    <header class="header"> 
+      <span class="name-input-error form__input-error"></span>
 
-      <img class="header__logo" src="imagesogo.svg" alt="logo" /> 
+      <input
+       id="job-input"
+       type="text"
+       placeholder="About me"
+       name="job"
+       minlength="2"
+       maxlength="200"
+       class="form__input form__input_content_job"
+       required />
 
-    </header> 
+      <span class="job-input-error form__input-error"></span>
+     </fieldset>
 
-    <main class="main"> 
+     <button type="submit" class="form__button">Save</button>
+    </form>
+   </div>
+  </div>
 
-      <section class="profile"> 
+  <!-- Add New Card-->
 
-        <img 
+  <div class="popup popup_type_add-card">
+   <div class="popup__content">
+    <button type="button" class="popup__close"></button>
 
-          src="imagesacques-cousteau.jpg" 
+    <h2 class="popup__header">New place</h2>
 
-          alt="avatar" 
-
-          class="profile__avatar" 
-
-        /> 
-
-        <div class="profile__description"> 
-
-          <div class="profile__wrapper"> 
-
-            <h1 class="profile__title">Jacques Cousteau</h1> 
-
-            <button type="button" class="profile__button-edit"></button> 
-
-          </div> 
-
-          <p class="profile__subtitle">Explorer</p> 
-
-        </div> 
-
-        <button type="button" class="profile__button-add"></button> 
-
-      </section> 
-
-      <section class="gallery"></section> 
-
-    </main> 
-
-    <footer class="footer"> 
-
-      <p class="footer__copyright">Â© 2022 Around The U.S.</p> 
-
-    </footer> 
-
- 
-
-    <!-- Edit Modal Profile --> 
-
-    <div class="popup popup_type_edit-profile"> 
-
-      <div class="popup__content"> 
-
-        <button type="button" class="popup__close"></button> 
-
-        <h2 class="popup__header">Edit profile</h2> 
-
-        <form name="profile" class="form popup__form" novalidate> 
-
-          <fieldset class="form__editor"> 
-
-            <input 
-
-              id="name-input" 
-
-              type="text" 
-
-              placeholder="Name" 
-
-              name="name" 
-
-              minlength="2" 
-
-              maxlength="40" 
-
-              class="form__input form__input_content_name" 
-
-              required 
-
-            /> 
-
-            <span class="name-input-error form__input-error"></span> 
-
-            <input 
-
-              id="job-input" 
-
-              type="text" 
-
-              placeholder="About me" 
-
-              name="job" 
-
-              minlength="2" 
-
-              maxlength="200" 
-
-              class="form__input form__input_content_job" 
-
-              required 
-
-            /> 
-
-            <span class="job-input-error form__input-error"></span> 
-
-          </fieldset> 
-
-          <button type="submit" class="form__button">Save</button> 
-
-        </form> 
-
-      </div> 
-
-    </div> 
-
- 
-
-    <!-- Add New Card--> 
-
-    <div class="popup popup_type_add-card"> 
-
-      <div class="popup__content"> 
-
-        <button type="button" class="popup__close"></button> 
-
-        <h2 class="popup__header">New place</h2> 
-
-        <form name="card-form" class="form popup__form" novalidate> 
-
-          <fieldset class="form__editor"> 
-
-            <input 
-
-              id="title-input" 
-
-              type="text" 
-
-              placeholder="Title" 
-
-              name="name" 
-
-              minlength="1" 
-
-              maxlength="30" 
-
-              class="form__input form__input_content_title" 
-
-              required 
-
-            /> 
-
-            <span class="title-input-error form__input-error"></span> 
-
-            <input 
-
-              id="link-input" 
-
-              type="url" 
-
-              placeholder="Image link" 
-
-              name="job" 
-
-              class="form__input form__input_content_link" 
-
-              required 
-
-            /> 
-
-            <span class="link-input-error form__input-error"></span> 
-
-          </fieldset> 
-
-          <button type="submit" class="form__button">Create</button> 
-
-        </form> 
-
-      </div> 
-
-    </div> 
-
- 
-
-    <!-- View Card Popup --> 
-
-    <div class="popup popup_type_card"> 
-
-      <div class="popup__card"> 
-
-        <button type="button" class="popup__close"></button> 
-
-        <img 
-
-          src="imagesosemite-valley.png" 
-
-          alt="Yosemite Valley" 
-
-          class="popup__image" 
-
-        /> 
-
-        <p class="popup__description"></p> 
-
-      </div> 
-
-    </div> 
-
- 
-
-    <template id="card"> 
-
-      <div class="card"> 
-
-        <img 
-
-          src="imagesosemite-valley.png" 
-
-          alt="Yosemite Valley" 
-
-          class="card__image" 
-
-        /> 
-
- 
-
-        <button type="button" class="card__button-trash"></button> 
-
-        <div class="card__description"> 
-
-          <h2 class="card__title">Yosemite Valley</h2> 
-
-          <button type="button" class="card__button-like"></button> 
-
-        </div> 
-
-      </div> 
-
-    </template> 
-
- 
-
- 
-
-    <script type="module" src="components/index.js"></script> 
-
-  </body> 
-
-</html> 
+    <form name="card-form" class="form popup__form" novalidate>
+     <fieldset class="form__editor">
+      <input
+       id="title-input"
+       type="text"
+       placeholder="Title"
+       name="name"
+       minlength="1"
+       maxlength="30"
+       class="form__input form__input_content_title"
+       required />
+
+      <span class="title-input-error form__input-error"></span>
+
+      <input
+       id="link-input"
+       type="url"
+       placeholder="Image link"
+       name="job"
+       class="form__input form__input_content_link"
+       required />
+
+      <span class="link-input-error form__input-error"></span>
+     </fieldset>
+
+     <button type="submit" class="form__button">Create</button>
+    </form>
+   </div>
+  </div>
+
+  <!-- View Card Popup -->
+
+  <div class="popup popup_type_card">
+   <div class="popup__card">
+    <button type="button" class="popup__close"></button>
+
+    <img
+     src="imagesosemite-valley.png"
+     alt="Yosemite Valley"
+     class="popup__image" />
+
+    <p class="popup__description"></p>
+   </div>
+  </div>
+
+  <template id="card">
+   <div class="card">
+    <img
+     src="imagesosemite-valley.png"
+     alt="Yosemite Valley"
+     class="card__image" />
+
+    <button type="button" class="card__button-trash"></button>
+
+    <div class="card__description">
+     <h2 class="card__title">Yosemite Valley</h2>
+
+     <button type="button" class="card__button-like"></button>
+    </div>
+   </div>
+  </template>
+
+  <script type="module" src="components/index.js"></script>
+ </body>
+</html>
