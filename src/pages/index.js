@@ -58,7 +58,7 @@ const cards = new Section(
 );
 cards.renderItems();
 
-const addNewCardModal = new PopupWithForm("popup_type_add-card", (data) => {
+const addNewCardModal = new PopupWithForm(".popup_type_add-card", (data) => {
   const cardInput = {
     name: data.name,
     link: data.link,
@@ -68,7 +68,7 @@ const addNewCardModal = new PopupWithForm("popup_type_add-card", (data) => {
   addCardFormValidation.toggleButtonState();
 });
 
-const imageModal = new PopupWithImage("popup_type_card");
+const imageModal = new PopupWithImage(".popup_type_card");
 imageModal.setEventListeners();
 
 /**
@@ -86,7 +86,7 @@ const userInfo = new UserInfo({
   jobSelector: ".profile__subtitle",
 });
 
-const editModal = new PopupWithForm("popup_type_edit-profile", (data) => {
+const editModal = new PopupWithForm(".popup_type_edit-profile", (data) => {
   userInfo.setUserInfo(data);
 });
 editModal.setEventListeners();

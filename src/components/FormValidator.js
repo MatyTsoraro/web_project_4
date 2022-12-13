@@ -11,9 +11,16 @@ class FormValidator {
     this._buttonElement = this._form.querySelector(this._submitButtonSelector);
   }
 
+  resetValidation() {
+    this._inputList.forEach((input) => {
+      this._hideInputError(input);
+    });
+  }
 
-    //Show error
-
+  /**
+   * Show error
+   * @param {object} inputElement
+   */
   _showInputError(inputElement) {
     const errorElement = this._form.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(this._inputErrorClass);
@@ -21,9 +28,10 @@ class FormValidator {
     errorElement.classList.add(this._errorClass);
   }
 
-  //hide error
-
-
+  /**
+   * hide error
+   * @param {object} inputElement
+   */
   _hideInputError(inputElement) {
     const errorElement = this._form.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.remove(this._inputErrorClass);
@@ -31,9 +39,10 @@ class FormValidator {
     errorElement.textContent = "";
   }
 
-  //show or hide input error
-
-
+  /**
+   * show or hide error
+   * @param {object} inputElement
+   */
   _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid) {
       this._showInputError(inputElement);
@@ -42,16 +51,17 @@ class FormValidator {
     }
   }
 
-
-  //checking all fields for validity
-
+  /**
+   * checking all fields for validity
+   * @returns boolean
+   */
   _hasInvalidInput = () => {
     return this._inputList.some((input) => !input.validity.valid);
   };
 
-
-   // toogle button state
-
+  /**
+   * toogle button state
+   */
   toggleButtonState() {
     if (this._hasInvalidInput()) {
       this._buttonElement.classList.add(this._inactiveButtonClass);
@@ -62,9 +72,9 @@ class FormValidator {
     }
   }
 
-
-  //set all listeners on the card
-
+  /**
+   * set all listeners on the card
+   */
   _setEventListeners() {
     this.toggleButtonState();
 
@@ -76,9 +86,9 @@ class FormValidator {
     });
   }
 
-
-  //start validation
-
+  /**
+   * start validation
+   */
   enableValidation() {
     this._setEventListeners();
   }
