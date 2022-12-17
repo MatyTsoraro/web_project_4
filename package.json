@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/MatyTsoraro/web_project_4/issues"
   },
-  "homepage": "https://github.com/MatyTsoraro/web_project_4#readme",
+  "homepage": "https://matytsoraro.github.io/web_project_4/",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
