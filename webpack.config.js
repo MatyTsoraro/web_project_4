@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: " https://github.com/MatyTsoraro/web_project_4",
+    publicPath: "",
   },
   target: ["web", "es5"],
   stats: "errors-only",
