@@ -21,12 +21,15 @@
   </head>
   <body class="page">
     <header class="header">
-      <img class="header__logo" src="images/logo.svg" alt="logo" />
+      <img class="header__logo"
+          src="<%=require('./images/logo.svg')%>"
+          alt="logo"
+        />
     </header>
     <main class="main">
       <section class="profile">
         <img
-          src="images/jacques-cousteau.jpg"
+          src="<%=require('./images/jacques-cousteau.jpg')%>"
           alt="avatar"
           class="profile__avatar"
         />
@@ -118,7 +121,7 @@
       <div class="popup__card">
         <button type="button" class="popup__close"></button>
         <img
-          src="images/yosemite-valley.png"
+          src="<%=require('./images/yosemite-valley.png')%>"
           alt="Yosemite Valley"
           class="popup__image"
         />
@@ -129,7 +132,7 @@
     <template id="card">
       <div class="card">
         <img
-          src="images/yosemite-valley.png"
+          src="<%=require('./images/yosemite-valley.png')%>"
           alt="Yosemite Valley"
           class="card__image"
         />
