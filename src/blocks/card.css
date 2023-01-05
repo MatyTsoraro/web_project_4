@@ -15,18 +15,20 @@
     cursor: pointer;
 }
 
-.card__image-trash {
-    position: absolute;
-    top: 18px;
-    right: 15px;
-    cursor: pointer;
-    background-color: transparent;
-    background-image: url("../images/icons/trash.svg");
-    min-height: 19px;
-    min-width: 18px;
-    background-position: center;
-    background-size: cover;
-    border: none;
+card__button-trash {
+  background-image: url("../images/icons/trash.svg");
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  width: 18px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.card__button-trash:hover {
+  opacity: 0.6;
 }
 
 .card__info {
