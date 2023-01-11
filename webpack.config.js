@@ -60,7 +60,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/pages/index.html", // path to our index.html file
+            template: "./index.html", // path to our index.html file
             favicon: "./favicon.ico"
         }),
         new CleanWebpackPlugin(),

@@ -40,19 +40,47 @@ export class Card {
         })
     }
 
-    likeCard(newLikes) {
-        this._likeButton.classList.add("card__like-button_active");
-        this._likes = newLikes;
-        this._likeCount.textContent = this._likes.length;
-    }
 
-    dislikeCard(newLikes) {
-        this._likeButton.classList.remove("card__like-button_active");
-        this._likes = newLikes;
-        this._likeCount.textContent = this._likes.length;
-    }
+    // likeCard(newLikes) {
+    //     this._likeButton.classList.add("card__like-button_active");
+    //     this._likes = newLikes;
+    //     this._likeCount.textContent = this._likes.length;
+    // }
+
+    // dislikeCard(newLikes) {
+    //     this._likeButton.classList.remove("card__like-button_active");
+    //     this._likes = newLikes;
+    //     this._likeCount.textContent = this._likes.length;
+    // }
+
     isLiked() {
         return this._likes.some((like) => like._id === this._userId);
+    }
+
+    setLikes(likes) {
+        this._likes = likes;
+        this._renderLikes();
+    }
+
+    _likeCard(){
+        this._likeButton.classList.add("card__like-button_active");
+    }
+
+    _dislikeCard(){
+        this._likeButton.classList.remove("card__like-button_active");
+    }
+
+    _renderLikes() {
+
+        if (this.isLiked()) {
+          // add active class  to the button
+          this._likeCard();
+        } else {
+          // remove active class from the button
+          this._dislikeCard();
+        }
+        // this._likes = newLikes;
+        this._likeCount.textContent = this._likes.length;
     }
 
     removeCard() {
@@ -78,7 +106,9 @@ export class Card {
         this._likeCount = this._element.querySelector(".card__like-count");
         this._likeCount.textContent = this._likes.length;
 
-        this.isLiked() && this.likeCard(this._likes);
+        this._renderLikes();
+
+        // this.isLiked() && this._likeCard(this._likes);
 
         this._setEventListeners();
 

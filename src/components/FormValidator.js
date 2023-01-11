@@ -49,7 +49,7 @@ export class FormValidator {
                 this._checkInputValidity(input);
                 this.toggleButton();
             });
-            this.resetValidation();
+            //this.resetValidation();
 
         });
     }
