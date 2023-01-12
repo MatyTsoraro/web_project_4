@@ -104,7 +104,7 @@ export class Card {
             (this._deleteButton.style.display = "none");
         this._likeButton = this._element.querySelector(".card__like-button");
         this._likeCount = this._element.querySelector(".card__like-count");
-        this._likeCount.textContent = this._likes.length;
+        //this._likeCount.textContent = this._likes.length;
 
         this._renderLikes();
 
