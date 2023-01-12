@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-card__button-trash {
+.card__button-trash {
   background-image: url("../images/icons/trash.svg");
   position: absolute;
   right: 15px;
