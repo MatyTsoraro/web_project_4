@@ -16,16 +16,17 @@
 }
 
 .card__button-trash {
-  background-image: url("../images/icons/trash.svg");
-  position: absolute;
-  right: 15px;
-  top: 18px;
-  width: 18px;
-  height: 20px;
-  border: none;
-  padding: 0;
-  transition: 0.3s;
-  cursor: pointer;
+    background-image: url("../images/icons/trash.svg");
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    width: 18px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    transition: 0.3s;
+    cursor: pointer;
 }
 .card__button-trash:hover {
   opacity: 0.6;

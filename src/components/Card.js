@@ -97,7 +97,7 @@ export class Card {
         this._image.src = this._link;
         this._image.alt = `Place in ${this._text}`;
 
-        this._deleteButton = this._element.querySelector(".card__image-trash");
+        this._deleteButton = this._element.querySelector(".card__button-trash");
 
 
         this._ownerId !== this._userId &&
